@@ -30,6 +30,7 @@ body::before {
   position: fixed;
   background: #040404 url("../img/bgLong.jpg") top right no-repeat;
   background-size: cover;
+  background-position: 50% 75%;
   left: 0;
   right: 0;
   top: 0;
