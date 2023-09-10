@@ -28,7 +28,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bgLong.jpg") top right no-repeat;
+  background: #040404 url("../img/bg1Mobile.jpg") top right no-repeat;
   background-size: cover;
   background-position: 50% 75%;
   left: 0;
@@ -40,7 +40,7 @@ body::before {
 }
 @media (min-width: 1024px) {
   body::before {
-    background-image: url("../img/bg3.jpg");
+    background-image: url("../img/bg1.jpg");
     background-attachment: fixed;
   }
 }
@@ -102,8 +102,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
 }
-#header .social-links {
+#header :has(.social-links) {
   margin-top: 40px;
+}
+#header .social-links {
   display: flex;
 }
 #header .social-links a {
@@ -116,11 +118,16 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
-  width: 40px;
+  min-width: 40px;
+  width: max-content;
+  padding: 10px 5px;
   height: 40px;
 }
 #header .social-links a:hover {
   background: var(--custom-vivid);
+}
+.hide {
+  opacity: 0;
 }
 @media (max-width: 992px) {
   #header h1 {
@@ -605,6 +612,10 @@ section .container {
   background: var(--custom-vivid);
   border: 2px solid var(--custom-vivid);
 }
+.resume .resume-section {
+  margin-bottom: 60px;
+  padding: 0 20px;
+}
 
 /*--------------------------------------------------------------
 # Services
@@ -723,7 +734,7 @@ section .container {
 .portfolio .portfolio-wrap img {
   width: 344px;
   height: 170px;
-  object-fit: cover;
+  object-fit:scale:fill ;
 }
 .portfolio .portfolio-wrap::before {
   content: "";
@@ -782,12 +793,13 @@ section .container {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
+  padding: 0 1.5em;
 }
 .portfolio .portfolio-wrap .portfolio-info p {
   color: #ffffff;
   font-size: 14px;
   text-transform: uppercase;
-  padding: 0;
+  padding: 0 2em;
   margin: 0;
 }
 .portfolio .portfolio-wrap .portfolio-links {
@@ -1066,4 +1078,40 @@ section .container {
 }
 .credits a:hover {
   color: #fff;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.resume-dropdown-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }

@@ -35,6 +35,17 @@
   }
 
   /**
+   * Class toggle
+   */
+  const toggleClass = (element, string) => {
+    if (element.classList.contains(string)) {
+      element.classList.remove(string)
+    } else {
+      element.classList.add(string)
+    }
+  }
+
+  /**
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
@@ -54,7 +65,7 @@
   })
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with ofset on links with a class name .scrollto
    */
   on('click', '#navbar .nav-link', function(e) {
     let section = select(this.hash)
@@ -63,12 +74,15 @@
 
       let navbar = select('#navbar')
       let header = select('#header')
+      let profile = select('#profile')
       let sections = select('section', true)
       let navlinks = select('#navbar .nav-link', true)
 
       navlinks.forEach((item) => {
         item.classList.remove('active')
       })
+
+      profile.classList.add('hide')
 
       this.classList.add('active')
 
@@ -84,6 +98,7 @@
         sections.forEach((item) => {
           item.classList.remove('section-show')
         })
+        profile.classList.remove('hide')
         return;
       }
 
@@ -106,6 +121,7 @@
       scrollto(this.hash)
     }
   }, true)
+
 
   /**
    * Activate/show sections on load with hash links
@@ -212,6 +228,22 @@
   });
 
   /**
+   * Hero type effect
+   */
+  const typed = select('.typed')
+  if (typed) {
+    let typed_strings = typed.getAttribute('data-typed-items')
+    typed_strings = typed_strings.split(',')
+    new Typed('.typed', {
+      strings: typed_strings,
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
+    });
+  }
+
+  /**
    * Initiate portfolio lightbox 
    */
   const portfolioLightbox = GLightbox({
@@ -243,5 +275,16 @@
       clickable: true
     }
   });
+
+  function toggleDropdown() {
+    var dropdown = document.getElementById("resume-dropdown");
+    if (dropdown.style.display === "block") {
+        setTimeout(function() {
+            dropdown.style.display = "none";
+        }, 2000); // 2000 milliseconds (2 seconds)
+    } else {
+        dropdown.style.display = "block";
+    }
+}
 
 })()
