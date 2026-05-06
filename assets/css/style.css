@@ -835,6 +835,45 @@ section .container {
   right: 15px;
 }
 
+.portfolio .portfolio-tags {
+  list-style: none;
+  padding: 0;
+  margin: 10px auto 0;
+  width: 344px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+.portfolio .portfolio-tags li {
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: rgba(12, 67, 116, 0.55);
+  border: 1px solid rgba(12, 67, 116, 0.7);
+  padding: 2px 9px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  line-height: 1.6;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.portfolio .portfolio-tags li:hover {
+  opacity: 1;
+}
+
+.glightbox-clean .gdesc-inner .gslide-desc,
+.gslide-desc {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
