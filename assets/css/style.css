@@ -835,6 +835,14 @@ section .container {
   right: 15px;
 }
 
+.portfolio .portfolio-links-gallery a:empty {
+  width: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
 .portfolio .portfolio-tags {
   list-style: none;
   padding: 0;
@@ -844,7 +852,7 @@ section .container {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .portfolio .portfolio-tags li {
   font-size: 10.5px;

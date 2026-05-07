@@ -120,7 +120,7 @@ Useful when AI is asked to write copy, taglines, or new sections:
 - **Current role:** SAP Application Developer Consultant @ Flexso Digital, Kontich (since Oct 2024).
 - **Prior role:** Junior Web Developer @ Adshot, Leuven (2023–2024).
 - **Identity:** SAP Consultant + Web Developer + Youth Animator (Chiro). Sporty, social, music/guitar, snowboarding, cooking.
-- **Languages:** NL (native), EN (high), FR (mid), DE (basic).
+- **Languages:** NL (native), EN (high), FR (mid).
 - **Tone of voice in existing copy:** first-person, warm, slightly informal, enthusiastic. Mixes career and personality. Keep that tone in any generated copy.
 
 ---
